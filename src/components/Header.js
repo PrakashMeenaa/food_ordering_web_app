@@ -34,8 +34,8 @@ const Header = () => {
                     <div className="hidden lg:flex lg:items-center lg:space-x-6">
                         <Link href="/" className="text-white hover:text-gray-300 transition duration-300">Home</Link>
                         <a href="#" className="text-white hover:text-gray-300 transition duration-300">Menu</a>
-                        <a href="#" className="text-white hover:text-gray-300 transition duration-300">About Us</a>
-                        <a href="#" className="text-white hover:text-gray-300 transition duration-300">Contact</a>
+                        <Link href="/about" className="text-white hover:text-gray-300 transition duration-300">About Us</Link>
+                        <Link href="/contactus" className="text-white hover:text-gray-300 transition duration-300">Contact</Link>
                         <a href="#" className="text-white hover:text-gray-300 transition duration-300">Profile info</a>
                         <Link href="/login" className='px-4 py-3 bg-white rounded-md text-[#c20d0d] font-bold '>Login</Link>
                         <img src="/cart.svg" alt="" />
@@ -50,8 +50,8 @@ const Header = () => {
                 <Link href="/" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">Home</Link>
                 <a href="#" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">Menu</a>
                 <Link href="/login" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">Login</Link>
-                <a href="#" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">About Us</a>
-                <a href="#" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">Contact</a>
+                <Link href="/about" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">About Us</Link>
+                <Link href="/contactus" className="block px-4 py-2 text-white hover:bg-gray-800 transition duration-300">Contact</Link>
             </div>
 
         </nav>
