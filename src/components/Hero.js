@@ -1,9 +1,13 @@
 import React from 'react'
 import Card from './Card'
+import Searchbar from './Searchbar'
 
 function Hero() {
     return (
         <>
+           <div > 
+                <Searchbar/>
+           </div>
             <div className='w-auto h-max flex flex-col overflow-hidden md:flex-row justify-around items-center relative'>
                 <img className='w-1/2 ' src="/Hero.png" alt="Dish image" />
                 <div className='w-[70%] md:w-1/2 flex flex-col text-center text-sm md:text-2xl lg:text-4xl ' >
