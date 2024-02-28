@@ -74,7 +74,7 @@ export default function RegisterPage() {
             </div>
             <p className="my-10 text-sm text-gray-400 text-center">or continue with</p>
             <div className="space-x-6 flex justify-center">
-              <button type="button" className="flex  justify-center gap-7 rounded-xl text-black w-full  py-2.5 px-4 font-semibold border-[1px] border-gray-400 items-center outline-primary hover:bg-primary hover:text-white focus:outline-red-800 h-max">
+              <button type="button" className="flex  justify-center gap-7 rounded-xl text-black w-full  py-2.5 px-4 font-semibold border-[1px] border-gray-400 items-center outline-primary hover:bg-primary hover:text-white focus:outline-red-800 h-max" onClick={() => signIn("google", { callbackUrl: "/" })}>
                 <img className="h-7" src="/google.png" alt="" /> Login with Google
               </button>
             </div>

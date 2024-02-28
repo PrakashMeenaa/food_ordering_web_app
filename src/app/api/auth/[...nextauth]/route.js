@@ -11,6 +11,18 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter"
 export const authOptions = {
   secret: process.env.SECRET,
   adapter: MongoDBAdapter(clientPromise),
+  callbacks: {
+    async session({ session, user, token }){
+        // Assign the userid and role from the jwt callback below
+        if(session?.user) { session.user.id = token.uid; session.user.role=token.roleid }
+        return session
+    },
+    async jwt({ token, user }){
+        if(user) { token.uid = user.id; token.roleid=user.role  }
+        return token;
+    },
+},
+session:{ strategy:'jwt' },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -26,14 +38,14 @@ export const authOptions = {
       async authorize(credentials, req) {
         const email = credentials?.email;
         const password = credentials?.password;
-   console.log({credentials})
         mongoose.connect(process.env.MONGO_URL);
         const user = await User.findOne({email});
-        const passwordOk = user && bcrypt.compareSync(password, user.password);
-        // const passwordOk = user && (password== user.password);
+        // const passwordOk = user && bcrypt.compareSync(password, user.password);
+         const passwordOk = user && (password== user.password);
 
        console.log(password,user.password)
         if (passwordOk) {
+          console.log(user)
           return user;
         }
 
