@@ -5,9 +5,6 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([0,]);
-
-  
-
   useEffect(() => {
     setCartToState();
   }, []);
@@ -21,21 +18,21 @@ export const CartProvider = ({ children }) => {
   };
 
   const addItemToCart = async ({
-   
-   key,
-   title,
+
+    key,
+    title,
     price,
     image,
     description,
     quantity = 1,
   }) => {
     const item = {
-     key,
-     title,
-    price,
-    image,
-    description,
-    quantity
+      key,
+      title,
+      price,
+      image,
+      description,
+      quantity
     };
 
     const isItemExist = cart?.cartItems?.find(
@@ -47,12 +44,12 @@ export const CartProvider = ({ children }) => {
     if (isItemExist) {
       newCartItems = cart?.cartItems?.map((i) =>
         i.key === isItemExist.key ? item : i
-     
+
       );
     } else {
       newCartItems = [...(cart?.cartItems || []), item];
     }
-     
+
     localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
     setCartToState();
   };
@@ -68,6 +65,7 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
+        setCart,
         addItemToCart,
         deleteItemFromCart,
       }}

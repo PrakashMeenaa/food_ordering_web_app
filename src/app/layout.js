@@ -8,6 +8,7 @@ import {CartProvider} from "@/components/CartContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  icons:'/icon.png',
   title: "Food delivery App",
   description: "Get your food fix in a flick, straight to your door, quick!",
 };

@@ -1,6 +1,5 @@
 "use client";
 import { signIn } from "next-auth/react";
-import Link from "next/link";
 import React, { useState } from "react";
 
 export default function LoginPage() {
