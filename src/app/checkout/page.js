@@ -5,13 +5,17 @@ import Link from "next/link";
 
 
 const page = () => {
-    const { cart } = useContext(CartContext)
+    const { cart,setCart } = useContext(CartContext)
 
     const deleteCart = (id) => {
         const newCartItems =[];
     
         localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));
-        
+        setCart(
+            localStorage.getItem("cart")
+              ? JSON.parse(localStorage.getItem("cart"))
+              : []
+          );
       };
     return (
         <div>

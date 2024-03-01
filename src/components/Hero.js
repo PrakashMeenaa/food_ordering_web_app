@@ -14,8 +14,12 @@ function Hero() {
                 <div className='w-[70%] md:w-1/2 flex flex-col text-center text-sm md:text-2xl lg:text-4xl ' >
                     <p className='px-7'>Get your <span className='font-bold fl'>food</span> fix in a flick, straight to your door, quick!</p>
                     <div className=' flex justify-around my-5 px-6 text-center'>
+                        <Link href='/menu'>
                         <button className='px-5 py-3 bg-primary rounded-full text-white '>ORDER NOW &rArr;</button>
+                        </Link> 
+                        <Link href='/contactus'>
                         <button className=' font-bold  hover:text-gray-600' >Learn more &rArr;</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -29,8 +33,8 @@ function Hero() {
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 mx-[7%] mt-[5%] '>
                 <Card link='/food_images/biryani.png' title='Chicken Biryani' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
-                <Card link='/food_images/burger.png' title='Kadai Chicken' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
-                <Card link='/food_images/pizza.png' title='Chicken Biryani' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
+                <Card link='/food_images/Kadai_chicken.png' title='Kadai Chicken' description="Experience the rich flavors of Kadai Chicken – tender, aromatic, and irresistibly spicy." price='19'/>
+                <Card link='/food_images/pizza.png' title='Pizza' description='A round canvas of dough, topped with savory delight, Pizzas cheesy embrace a symphony of flavor takes flight.' price='9'/>
                 
             </div>
         </>
