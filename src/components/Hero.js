@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import Searchbar from './Searchbar'
+import Link from 'next/link'
 
 function Hero() {
     return (
@@ -19,17 +20,17 @@ function Hero() {
                 </div>
             </div>
             <div className='w-screen overflow-x-hidden flex justify-center items-center -my-[10%] relative'>
-                <img className="w-1/3   rounded-r-full relative -left-[25%] md:-left-[30%]" src="/pizza.png" alt="" />
-                <button className='text-center h-max '>
+                <img className="w-1/3   rounded-r-full relative -left-[25%] md:-left-[30%]" src="/food_images/pizza.png" alt="" />
+                <Link  href={'/menu'} className='text-center h-max '>
                     <p className='font-bold text-orange-600 text-xl md:text-2xl'>Check Out</p>
                     <p className='text-primary  text-4xl md:text-5xl font-bold'>Menu</p>
-                </button>
-                <img className="w-1/3   rounded-r-full relative -right-[25%] md:-right-[30%]" src="/pizza.png" alt="" />
+                </Link>
+                <img className="w-1/3   rounded-r-full relative -right-[25%] md:-right-[30%]" src="/food_images/pizza.png" alt="" />
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 mx-[7%] mt-[5%] '>
-                <Card link='/biryani.png' title='Chicken Biryani' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
-                <Card link='/biryani.png' title='Kadai Chicken' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
-                <Card link='/biryani.png' title='Chicken Biryani' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
+                <Card link='/food_images/biryani.png' title='Chicken Biryani' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
+                <Card link='/food_images/burger.png' title='Kadai Chicken' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
+                <Card link='/food_images/pizza.png' title='Chicken Biryani' description='Chicken Biryani: A richly spiced rice dish with succulent chicken, bursting with flavors of aromatic spices and herbs.' price='19'/>
                 
             </div>
         </>

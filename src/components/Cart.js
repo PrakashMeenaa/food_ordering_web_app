@@ -1,62 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from './CartContext'
 
 const Cart = () => {
+  const {cart}=useContext(CartContext)
   return (
     <div>
-      <div class="container mx-auto">
-  
-  <div class="my-8">
-    <div class="flex items-center border-b border-gray-200 py-2">
-      <div class="flex-1">
-        <h3 class="text-lg font-semibold">Item Name</h3>
-      </div>
-      <div class="w-24 text-center">
-        <h3 class="text-lg font-semibold">Price</h3>
-      </div>
-      <div class="w-24 text-center">
-        <h3 class="text-lg font-semibold">Quantity</h3>
-      </div>
-      <div class="w-24 text-center">
-        <h3 class="text-lg font-semibold">Total</h3>
-      </div>
+      <button className="py-4 px-1 relative border-2 border-transparent text-gray-800 rounded-full hover:text-gray-400 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Cart">
+  <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+    <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+  </svg>
+  <span className="absolute inset-0 object-right-top -mr-6">
+    <div className="inline-flex items-center px-1.5 py-0.5 border-2 border-white rounded-full text-xs font-semibold leading-4 bg-red-500 text-white">
+    {cart?.cartItems?.reduce(
+                          (acc, item) => acc + item.quantity,
+                          0
+                        )||0}
     </div>
-
-    
-    <div class="flex items-center border-b border-gray-200 py-2">
-      <div class="flex-1">
-        <p class="text-gray-800">Item 1</p>
-      </div>
-      <div class="w-24 text-center">
-        <p class="text-gray-800">$10.00</p>
-      </div>
-      <div class="w-24 text-center">
-        <input type="number" class="w-full p-1 border border-gray-300" value="1"/>
-      </div>
-      <div class="w-24 text-center">
-        <p class="text-gray-800">$10.00</p>
-      </div>
-    </div>
-    
-
-  </div>
-
-  
-  <div class="flex justify-end">
-    <div class="w-1/3">
-      <div class="border-t border-gray-200 py-4">
-        <p class="text-lg font-semibold">Total Items: <span>2</span></p>
-        <p class="text-lg font-semibold">Total Price: <span>$20.00</span></p>
-      </div>
-    </div>
-  </div>
-
-  
-  <div class="flex justify-between mt-8">
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Checkout</button>
-    <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Continue Shopping</button>
-  </div>
-</div>
-
+  </span>
+</button>
     </div>
   )
 }
