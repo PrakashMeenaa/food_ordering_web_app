@@ -6,7 +6,7 @@ const About = () => {
             <p className='font-bold'>OUT STORY</p>
             <p className='font-extrabold text-3xl text-primary '>About us</p>
             <div className='mt-10 leading-snug flex flex-col gap-5'>
-                <p> "At <span className='font-bold'> J Food</span>, we're all about making your food cravings a breeze to satisfy! Picture this: you're lounging on your couch, feeling peckish, and voila! Your favorite dishes from the coolest joints in town magically appear at your doorstep. We're here to make that dream a reality.
+                <p> `&quot;`At <span className='font-bold'> J Food</span>, we're all about making your food cravings a breeze to satisfy! Picture this: you're lounging on your couch, feeling peckish, and voila! Your favorite dishes from the coolest joints in town magically appear at your doorstep. We're here to make that dream a reality.
                 </p>
                 <p> We've rounded up a gang of local eateries, each armed with their own flavor-packed arsenal. Whether you're in the mood for a cheesy pizza, a fiery curry, or a juicy burger, we've got just the thing to hit the spot.
                 </p>

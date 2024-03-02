@@ -1,7 +1,7 @@
 
 # Food-Delivery-Web-App
 Online Food Ordering System Website using Next.js, Mongodb, HTML, JavaScript & Tailwind CSS. 
-<!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -12,7 +12,7 @@ Online Food Ordering System Website using Next.js, Mongodb, HTML, JavaScript & T
 </details>
 
 ## System Description and Functions
-
+**Demo:** https://youtu.be/cyXWv9l413w<br/>
 <img src=""><br/>
 
 
@@ -30,7 +30,7 @@ Users can:<br/>
 
 
 ### Screenshots
-Find how the project looks in <b>screenshots folder</b> Or <a href="https://github.com/kaushikjadhav01/Online-Food-Ordering-Web-App/tree/master/screenshots">click here</a>
+Find how the project looks in <b>screenshots folder</b> Or <a href="/Screenshot/Homepage.png">click here</a>
 
 ## Built With
  <ol>

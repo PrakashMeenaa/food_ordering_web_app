@@ -29,6 +29,7 @@ function Hero() {
                     <p className='font-bold text-orange-600 text-xl md:text-2xl'>Check Out</p>
                     <p className='text-primary  text-4xl md:text-5xl font-bold'>Menu</p>
                 </Link>
+                
                 <img className="w-1/3   rounded-r-full relative -right-[25%] md:-right-[30%]" src="/food_images/pizza.png" alt="" />
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 mx-[7%] mt-[5%] '>
