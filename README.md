@@ -13,7 +13,7 @@ Online Food Ordering System Website using Next.js, Mongodb, HTML, JavaScript & T
 
 ## System Description and Functions
 **Demo:** https://youtu.be/cyXWv9l413w<br/>
-<img src=""><br/>
+
 
 
 Users can:<br/>
